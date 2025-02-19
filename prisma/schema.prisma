@@ -10,6 +10,7 @@ datasource db {
 model todo {
   id        Int      @id @default(autoincrement())
   tittle    String   @db.VarChar(255)
+  color     String   @default("#FFFFFF")
   completed Boolean? @default(false)
   createdAt DateTime @default(dbgenerated("(curtime())")) @db.Timestamp(0)
   updatedAt DateTime @default(now()) @db.Timestamp(0)
